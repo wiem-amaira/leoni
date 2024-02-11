@@ -1,0 +1,134 @@
+<div class="container-fluid">
+  <br>
+  <div class="card">
+    <div class="card-header border-0 bg-default">
+      <div class="row">
+        <div class="col-6">
+          <h3 class="mb-0 text-white">Commandes</h3>
+        </div>
+        <div class=" col-6 text-right">
+          <a routerLink="create-client" class=" btn btn-sm btn-outline-info btn-round btn-icon" href="javascript:void(0)" placement="top" tooltip="Add Client" aria-describedby="tooltip-185">
+            <span class=" btn-inner--icon">
+              <em class="fas fa-user-edit"></em>
+            </span>
+            <span class="btn-inner--text">Gérer</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+        <tr>
+          <th class="th-sm">Collaborateurs</th>
+          <th class="th-sm">Produit/Quantité</th>
+          <th class="th-sm">Total</th>
+          <th class="th-sm">Status</th>
+          <th class="th-sm">Action</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr >
+          <td>
+            <h5>Wiem Amaira</h5>
+          </td>
+          <td>
+            <div class="d-flex flex-column">
+              <h4>Croissant</h4>
+              <h5 class="text-danger">x 2</h5>
+            </div>
+          </td>
+          <td>
+            <h5>4.400 DT</h5>
+          </td>
+          <td>
+            <h5 class="text-orange">En cours de traitement</h5>
+          </td>
+          <td>
+            <button class="btn-sm btn-danger" tooltip="View Client's Details">
+              Changer le status
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-7">
+      <div class="card">
+        <div class="card-header border-0 bg-default">
+          <div class="row">
+            <div class="col-6">
+              <h3 class="mb-0 text-white">Réclamations</h3>
+            </div>
+            <div class=" col-6 text-right">
+              <a routerLink="create-client" class=" btn btn-sm btn-outline-info btn-round btn-icon" href="javascript:void(0)" placement="top" tooltip="Add Client" aria-describedby="tooltip-185">
+            <span class=" btn-inner--icon">
+              <em class="fas fa-user-edit"></em>
+            </span>
+                <span class="btn-inner--text">Gérer</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 d-flex align-items-center justify-content-center">
+          <h4>En cours de développement</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="card">
+        <div class="card-header border-0 bg-default">
+          <div class="row">
+            <div class="col-6">
+              <h3 class="mb-0 text-white">Produits</h3>
+            </div>
+            <div class=" col-6 text-right">
+              <a routerLink="create-client" class=" btn btn-sm btn-outline-info btn-round btn-icon" href="javascript:void(0)" placement="top" tooltip="Add Client" aria-describedby="tooltip-185">
+            <span class=" btn-inner--icon">
+              <em class="fas fa-user-edit"></em>
+            </span>
+                <span class="btn-inner--text">Ajouter</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+            <tr>
+              <th class="th-sm">Image</th>
+              <th class="th-sm">Label</th>
+              <th class="th-sm">Action</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr >
+              <td>
+                <img class="img-thumbnail product-image" src="assets/img/croissant.jpeg"/>
+              </td>
+              <td>
+                <div class="d-flex flex-column">
+                  <h3>Croissant</h3>
+                  <h5 class="text-danger">2.200 DT</h5>
+                </div>
+              </td>
+              <td>
+                <button class="btn-sm btn-danger" tooltip="View Client's Details">
+                  Commander
+                </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

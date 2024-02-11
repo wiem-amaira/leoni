@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-5">
+      <div class="card">
+        <div class="card-header border-0 bg-default">
+          <div class="row">
+            <div class="col-6">
+              <h3 class="mb-0 text-white">Liste des produits</h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center flex-column py-lg-5" style="cursor: pointer;" (click)="refreshList()">
+          <em class="fas fa-coffee text-danger" style="font-size: 35px"></em>
+          <p class="text-danger font-weight-bolder">Consulter la liste des produits</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-7">
+      <div class="card">
+        <div class="card-header border-0 bg-default">
+          <div class="row">
+            <div class="col-6">
+              <h3 class="mb-0 text-white">Ajout d'un produits</h3>
+            </div>
+          </div>
+        </div>
+
+        <form class="form-group px-3 py-3" method="post" action="http://localhost/LEONI-Store-Back/products/controllers/products-api.php">
+          <div class="row">
+            <div class="col-6">
+              <label class="form-control-label">Label</label>
+              <input class="form-control" placeholder="Label" type="text" id="label" name="label">
+            </div>
+            <div class="col-6">
+              <label class="form-control-label">Prix</label>
+              <div class=" input-group input-group-merge">
+                <input class=" form-control" placeholder="Prix" type="number" id="prix" name="prix">
+                <div class=" input-group-append">
+                <span class=" input-group-text">
+                  DT
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12">
+              <label class="form-control-label">Image</label>
+              <input type="file" class="form-control" name="image" id="image">
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+              <button class="btn btn-default" name="submit" id="submit">Ajouter</button>
+              <button type="reset" class="btn btn-warning ml-3" >Annuler</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

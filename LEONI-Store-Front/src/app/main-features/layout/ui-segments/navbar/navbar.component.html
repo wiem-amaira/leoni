@@ -1,0 +1,100 @@
+<nav
+  class="navbar navbar-top navbar-expand navbar-dark border-bottom bg-default"
+  id="navbar-main"
+>
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-center ml-md-auto">
+        <li class="nav-item d-xl-none">
+          <!-- Sidenav toggler -->
+          <div
+            class="pr-3 sidenav-toggler sidenav-toggler-dark"
+            data-action="sidenav-pin"
+            data-target="#sidenav-main"
+            (click)="openSidebar()"
+          >
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line" aria-hidden="true"></i>
+              <i class="sidenav-toggler-line" aria-hidden="true"></i>
+              <i class="sidenav-toggler-line" aria-hidden="true"></i>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown" dropdown placement="bottom-right">
+          <a
+            class="nav-link dropdown-toggle"
+            href="javascript:void(0)"
+            role="button"
+            dropdownToggle
+          >
+            <i class="ni ni-ungroup" aria-hidden="true"></i>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-md dropdown-menu-dark bg-default dropdown-menu-right"
+            *dropdownMenu
+          >
+            <div class="row shortcuts px-3">
+              <a [href]="APP_ROUTING.PRIVATE.DASHBOARD" class="col-6 shortcut-item" target="_self">
+                <span class="shortcut-media avatar rounded-circle bg-gradient-primary">
+                  <i class="ni ni-shop" aria-hidden="true"></i>
+                </span>
+                <small>Dashboard</small>
+              </a>
+              <a [href]="APP_ROUTING.PRIVATE.PRODUCTS" class="col-6 shortcut-item" target="_self">
+                <span class="shortcut-media avatar rounded-circle bg-gradient-danger">
+                  <i class="fas fa-coffee" aria-hidden="true"></i>
+                </span>
+                <small>Produits</small>
+              </a>
+              <a [href]="APP_ROUTING.PRIVATE.ORDERS" class="col-6 shortcut-item" target="_self">
+                <span class="shortcut-media avatar rounded-circle bg-gradient-info">
+                  <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                </span>
+                <small>Commandes</small>
+              </a>
+              <a [href]="APP_ROUTING.PRIVATE.CLAIMS" class="col-6 shortcut-item" target="_self">
+                <span class="shortcut-media avatar rounded-circle bg-gradient-success">
+                  <i class="fas fa-user-times" aria-hidden="true"></i>
+                </span>
+                <small>Réclamations</small>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- User -->
+      <ul class="navbar-nav align-items-center ml-auto ml-md-0">
+        <li class="nav-item dropdown" dropdown placement="bottom-right">
+          <a class="nav-link pr-0 dropdown-toggle" role="button" dropdownToggle>
+            <div class="media align-items-center">
+              <span class="avatar avatar-sm rounded-circle bg-white">
+                <em class="fas fa-user-alt text-default"></em>
+              </span>
+              <div class="media-body ml-2 d-none d-lg-block user-connected" *ngIf="connectedUser">
+                <span class="mb-0 text-sm  font-weight-bold">{{user?.name}}</span>
+              </div>
+            </div>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-arrow dropdown-menu-right"
+            *dropdownMenu
+          >
+            <div class=" dropdown-header noti-title">
+              <h6 class="text-overflow m-0">Bienvenue !</h6>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a href="javascript:void()" class="dropdown-item" (click)="logout()">
+              <i class="ni ni-user-run" aria-hidden="true"></i> <span>Déconnexion</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div
+  *ngIf="sidenavOpen === true"
+  class="backdrop d-xl-none"
+  (click)="toggleSidenav()"
+></div>
